@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Palindromo</string>
+    <string name="palindrome_example">NI TALAR BRA LATIN</string>
+    <string name="verify_button">Verificar</string>
+    <string name="waiting_text">Escreva uma frase e clique em verificar.</string>
+    <string name="is_palindrome">\" {{palindrome}} \" é palindrome</string>
+    <string name="is_not_palindrome">\" {{palindrome}} \" não é palindrome</string>
 </resources>
