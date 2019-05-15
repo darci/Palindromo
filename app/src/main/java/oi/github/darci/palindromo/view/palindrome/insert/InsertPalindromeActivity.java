@@ -1,4 +1,4 @@
-package oi.github.darci.palindromo;
+package oi.github.darci.palindromo.view.palindrome.insert;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,18 +6,32 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import javax.inject.Inject;
+
+import oi.github.darci.palindromo.R;
+import oi.github.darci.palindromo.application.PalindromeApplication;
+import oi.github.darci.palindromo.data.palindrome.insert.PalindromeInsert;
+import oi.github.darci.palindromo.data.palindrome.list.PalindromeList;
+
 import static oi.github.darci.palindromo.util.PalindromeUtils.isPalindrome;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-public class MainActivity extends AppCompatActivity {
+public class InsertPalindromeActivity extends AppCompatActivity {
+    @Inject
+    PalindromeInsert palindromeInsert;
+
+    @Inject
+    PalindromeList palindromeList;
+
     private EditText palindromeEditText;
     private TextView resultTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_palindrome_insert);
         bindView();
+        PalindromeApplication.getPalindromeComponent().inject(this);
     }
 
     private void bindView() {
