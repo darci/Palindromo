@@ -9,7 +9,8 @@ public class PalindromeCountImpl implements PalindromeCount {
     public long count() {
         Realm realm = Realm.getDefaultInstance();
         realm.beginTransaction();
-        long count =  realm.where(Palindrome.class).count();
+        realm.beginTransaction();
+        long count = realm.where(Palindrome.class).count();
         realm.close();
         return count;
 

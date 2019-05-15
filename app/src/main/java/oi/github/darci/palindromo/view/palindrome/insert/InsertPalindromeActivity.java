@@ -1,5 +1,6 @@
 package oi.github.darci.palindromo.view.palindrome.insert;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -21,6 +22,7 @@ import butterknife.ButterKnife;
 import oi.github.darci.palindromo.R;
 import oi.github.darci.palindromo.application.PalindromeApplication;
 import oi.github.darci.palindromo.data.model.Palindrome;
+import oi.github.darci.palindromo.view.palindrome.list.ListPalindromeActivity;
 
 import static oi.github.darci.palindromo.util.PalindromeUtils.isPalindrome;
 import static org.apache.commons.lang3.StringUtils.isBlank;
@@ -66,7 +68,7 @@ public class InsertPalindromeActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_favorites:
-                Toast.makeText(this, "TODO", Toast.LENGTH_LONG).show();
+                startActivity(new Intent(this, ListPalindromeActivity.class));
                 return true;
 
             default:

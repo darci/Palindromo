@@ -11,14 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".view.palindrome.insert.InsertPalindromeActivity">
+        <activity
+            android:name=".view.palindrome.insert.InsertPalindromeActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+                android:parentActivityName=".view.palindrome.insert.InsertPalindromeActivity"
+            android:name=".view.palindrome.list.ListPalindromeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

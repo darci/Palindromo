@@ -1,7 +1,6 @@
 package oi.github.darci.palindromo.application;
 
 import android.app.Application;
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import oi.github.darci.palindromo.dagger.DaggerPalindromeComponent;
@@ -20,10 +19,7 @@ public class PalindromeApplication extends Application {
 
     private void initRealm() {
         Realm.init(getApplicationContext());
-        RealmConfiguration config = new RealmConfiguration.Builder()
-                .name("palindrome.realm")
-                .deleteRealmIfMigrationNeeded()
-                .build();
+        RealmConfiguration config = new RealmConfiguration.Builder().name("palindrome.realm").deleteRealmIfMigrationNeeded().build();
         Realm.setDefaultConfiguration(config);
     }
 

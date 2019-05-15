@@ -1,6 +1,7 @@
 package oi.github.darci.palindromo.data.model;
 
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 public class Palindrome extends RealmObject {
@@ -8,6 +9,9 @@ public class Palindrome extends RealmObject {
     private Long idKey;
 
     private String text;
+
+    @Ignore
+    public static final String ID_KEY = "idKey";
 
     public Palindrome() {
         //https://stackoverflow.com/questions/46929342/custom-constructor-error-with-realm-model-class
