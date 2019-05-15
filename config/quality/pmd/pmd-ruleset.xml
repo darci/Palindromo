@@ -29,7 +29,6 @@
     <rule ref="category/java/errorprone.xml/MethodWithSameNameAsEnclosingClass" />
     <rule ref="category/java/codestyle.xml/NoPackage" />
     <rule ref="category/java/codestyle.xml/PackageCase" />
-    <rule ref="category/java/codestyle.xml/ShortClassName" />
     <rule ref="category/java/codestyle.xml/ShortVariable" />
     <rule ref="category/java/errorprone.xml/SuspiciousEqualsMethodName" />
     <rule ref="category/java/errorprone.xml/SuspiciousHashcodeMethodName" />

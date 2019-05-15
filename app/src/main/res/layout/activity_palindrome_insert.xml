@@ -6,28 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".view.palindrome.insert.InsertPalindromeActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
     <EditText
-        android:importantForAutofill="no"
         android:id="@+id/palindrome_edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:hint="@string/palindrome_example"
-        app:layout_constraintBottom_toTopOf="@+id/text_result_text_view"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
         app:layout_constraintEnd_toStartOf="@+id/verify_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_toolbar"
         tools:targetApi="o" />
 
     <Button
         android:id="@+id/verify_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="verifyBtbClick"
         android:layout_marginEnd="8dp"
+        android:onClick="verifyBtbClick"
         android:text="@string/verify_button"
         app:layout_constraintBottom_toBottomOf="@+id/palindrome_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,5 +57,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="addBtbClick"
+        android:text="@string/add_button"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/text_result_text_view"
+        app:layout_constraintStart_toStartOf="@+id/text_result_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/text_result_text_view" />
 
 </android.support.constraint.ConstraintLayout>
